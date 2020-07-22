@@ -1,0 +1,96 @@
+#siteWelcom {
+    display: none;
+}
+#siteWelcom.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #F9F9F9;
+    position: absolute;
+    z-index: 9999;
+}
+#siteWelcom .loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+}
+#siteWelcom .loading::before,#siteWelcom .loading::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    animation: loading-action 1.5s infinite;
+}
+#siteWelcom .loading::after {
+    animation-delay: 0.75s;
+}
+@keyframes loading-action {
+    0%{
+        width: 0;
+        height: 0;
+        opacity: 100%;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+
+
+#postMessage.posting::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.8)
+}
+#postMessage.posting .loading {
+
+}
+
+#postMessage.posting .loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+}
+#postMessage.posting .loading::before,#postMessage.posting .loading::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    animation: loading-action 1.5s infinite;
+}
+#postMessage.posting .loading::after {
+    animation-delay: 0.75s;
+}
